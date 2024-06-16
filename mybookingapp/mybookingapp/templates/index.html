@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отдых.by - Главная</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static './style.css' %}">
+    <style>
+        .hero {
+            background: url('https://unsplash.com/photos/a-group-of-people-walking-along-a-beach-at-sunset-BubVshX3i8k') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Отдых.by</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Объявления</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div>
+            <h1>Найдите лучшие предложения на Отдых.by</h1>
+            <form class="mt-4">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label for="destination" class="form-label">Куда едем</label>
+                        <input type="text" class="form-control" id="destination" placeholder="Курорт, город или адрес">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="checkin" class="form-label">Заезд</label>
+                        <input type="date" class="form-control" id="checkin">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="checkout" class="form-label">Отъезд</label>
+                        <input type="date" class="form-control" id="checkout">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="guests" class="form-label">Гости</label>
+                        <select class="form-select" id="guests">
+                            <option selected>2 взрослых, без детей</option>
+                            <option value="1">1 взрослый</option>
+                            <option value="2">2 взрослых</option>
+                            <option value="2a1c">2 взрослых, 1 ребенок</option>
+                            <option value="2a2c">2 взрослых, 2 детей</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="search" class="form-label visually-hidden">Поиск</label>
+                        <button type="submit" class="btn btn-primary w-100" id="search">Поиск</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Популярные категории</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Недвижимость</h5>
+                        <p class="card-text">Найдите лучшие предложения по аренде недвижимости.</p>
+                        <a href="#" class="btn btn-primary">Посмотреть</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Автомобили</h5>
+                        <p class="card-text">Выберите автомобиль на любой вкус и бюджет.</p>
+                        <a href="#" class="btn btn-primary">Посмотреть</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Техника</h5>
+                        <p class="card-text">Арендуйте необходимую технику для работы или отдыха.</p>
+                        <a href="#" class="btn btn-primary">Посмотреть</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2023 Отдых.by. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
